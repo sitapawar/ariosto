@@ -1,5 +1,5 @@
-# spiderweb
-Network visualizer tool
+# I Nodi di Orlando
+Orlando Furioso Network visualizer tool
 
 # React Graph Package 
 Network graph visual uses this library (https://www.npmjs.com/package/react-graph-vis). Run this in the project directory to install
