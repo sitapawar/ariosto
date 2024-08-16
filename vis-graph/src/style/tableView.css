@@ -1,0 +1,61 @@
+/* tableView.css */
+
+.TableView {
+    margin: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    width:90%;
+  }
+  .table-container {
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 450px; /* Set a fixed height for the table container */
+    margin-top: 10px; /* Optional: add some space above the table */
+    max-width: 90%; /* Ensure the container doesn't exceed viewport width */
+  }
+
+  .TableView button {
+    margin-bottom: 10px;
+  }
+
+  .TableView button {
+    padding: 8px 15px; /* Add padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    background-color: #516AB8; /* Background color for the button */
+    color: white; /* Text color for the button */
+    font-size: 12px; /* Font size for the button text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 20%;
+  }
+  
+  .TableView button:hover {
+    background-color: #D2D9E5; /* Darker background color on hover */
+  }
+  
+  .TableView table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  h2{
+    margin-top: 5%;
+  }
+  tbody td {
+    padding: 10px;
+    max-width: 40%; /* Set a max-width for cells */
+    word-wrap: break-word; /* Allows text to wrap within cells */
+  }
+  
+  .TableView th, .TableView td {
+    border: 1px solid #BCC1CC;
+    padding: 8px;
+  }
+  
+  .TableView th {
+    background-color: #D2D9E5;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 100%; /* Ensure the table doesn't exceed the container's width */
+    border-collapse: collapse;
+  }

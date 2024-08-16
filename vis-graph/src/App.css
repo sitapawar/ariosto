@@ -1,0 +1,32 @@
+body{
+  background-color: white;
+}
+
+.mygraph{
+  background-color: black;
+  height: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  transform: translateY(-15%);
+
+}

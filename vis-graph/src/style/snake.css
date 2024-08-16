@@ -1,0 +1,17 @@
+.Snake {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+    margin: 20px auto; /* Center the object horizontally and add vertical spacing */
+    min-width: 30%;
+    width:100%
+  }
+
+  p{
+    font-size: 10px;
+    color:#464D6B;
+  }
+  
