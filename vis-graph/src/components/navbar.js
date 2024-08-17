@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../style/navbar.css';
-import logo from '../assets/spiderweb_logo.png';
+import logo from '../assets/AriostoHeader3.png';
+import logo2 from '../assets/header5.png';
+
 
 const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fileUploaded, setFilteredData}) => {
   const [groupNames, setGroupNames] = useState([]);
@@ -55,8 +57,8 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
   return (
     <nav className="navbar">
       <div className="title-logo">
-        <img className="header-logo" src={logo} alt="Logo" />
-        <div className="navbar-title">Spiderweb</div>
+        <img className="header-logo" src={logo2} alt="Logo" />
+        <div className="navbar-title">Ariosto's Knots</div>
       </div>
       <div className="navbar-buttons">
         <div className="navbar-button dropdown">

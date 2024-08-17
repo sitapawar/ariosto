@@ -12,7 +12,7 @@ const TableView = ({ nodes, edges }) => {
     <div className="TableView">
       <h2>{viewType === 'nodes' ? 'Character List' : 'Relationship List'}</h2>
       <button onClick={handleToggleView}>
-        {viewType === 'nodes' ? 'Show Edges' : 'Show Nodes'}
+        {viewType === 'nodes' ? 'View Relationships' : 'View Characters'}
       </button>
       <div className="table-container">
         <table>

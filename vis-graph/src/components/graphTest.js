@@ -3,7 +3,7 @@ import Graph from 'react-vis-network-graph';
 
 const generateColorPalette = (numColors) => {
     const colors = [
-        '#ED5E5E', '#81C0D4', '#1D5A6D', '#1D256D', '#6D1D3F', '#9C80B0'
+        '#E3371E','#DD8D22','#0593A2','#103778'
     ];
     return colors.slice(0, numColors);
 };
@@ -68,8 +68,10 @@ export default function TestGraph({ nodes, edges }) {
             font: {
                 size: 12,
                 align: 'middle',
-                vadjust: -10
-            },
+                vadjust: -10,
+                background: 'none',  // Ensure no background color for the edge labels
+                strokeWidth: 0,  // Remove the border around the edge labels
+                strokeColor: 'none'             },
             scaling: {
                 label: true,
                 customScalingFunction: function(min, max, total, value) {
