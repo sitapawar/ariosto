@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx';
 import TestGraph from './graphTest';
 import TableView from './TableView'; 
 import '../style/graphManager.css';
-import excelFile from '../assets/CharacterFile.numbers'; // Excel file in the assets folder
+import excelFile from '../assets/CharacterFile2.numbers'; // Excel file in the assets folder
 
 const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredData }) => {
   const [nodes, setNodes] = useState([]);
@@ -43,7 +43,7 @@ const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredDa
       })
       .then(response => response.json())
       .then(serverData => {
-        console.log(serverData);
+        console.log("recieved data");
         onFileProcessed(serverData);
       })
       .catch(error => console.error('Error:', error));
