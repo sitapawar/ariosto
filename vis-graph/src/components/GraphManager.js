@@ -60,7 +60,7 @@ const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredDa
       const Pnodes = nodesData.map(item => ({
         id: item.ID,
         label: item.Name,
-        title: `Description: ${item.Label} Group: ${item.group1}`,
+        title: item.Label,
         group: item.group1
       }));
 
@@ -91,7 +91,7 @@ const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredDa
       const filteredNodes = nodesData.map(item => ({
         id: item.ID,
         label: item.Name,
-        title: `Description: ${item.Label} Group: ${item.group1}`,
+        title: item.Label,
         group: item.group1
       }));
       const filteredEdges = edgesData.map(item => ({

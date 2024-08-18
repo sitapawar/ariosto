@@ -40,7 +40,7 @@ const TableView = ({ nodes, edges }) => {
                 <tr key={node.id}>
                   <td>{node.ID}</td>
                   <td>{node.Name}</td>
-                  <td>{node.group}</td>
+                  <td>{node.group1}</td>
                   <td>{node.Label}</td>
                 </tr>
               ))

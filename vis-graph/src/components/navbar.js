@@ -94,7 +94,6 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
           </div>
         </div>
         <button className="navbar-button" onClick={handleResetClick}>Reset</button>
-        <button className="navbar-button" onClick={onUploadClick}>Upload</button>
         <button className="navbar-button" onClick={toggleTableView}>
           {showTableView ? 'Hide Table View' : 'Show Table View'}
         </button>

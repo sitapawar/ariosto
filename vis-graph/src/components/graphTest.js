@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Graph from 'react-vis-network-graph';
+import '../style/graphTest.css';
+
 
 const generateColorPalette = (numColors) => {
     const colors = [

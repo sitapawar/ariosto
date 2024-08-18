@@ -1,0 +1,11 @@
+/* graphTest.css */
+
+.vis-network .vis-tooltip {
+    max-width: 500px; /* Set a maximum width for the tooltip to encourage wrapping */
+    white-space: normal !important; /* Ensure wrapping */
+    word-wrap: break-word; /* Break long words */
+    font-size: 16px; /* Make the text larger */
+    line-height: 1.4; /* Adjust line height for readability */
+    font-family: serif; /* Change the font to a serif font */
+
+}
