@@ -47,7 +47,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%; /* Cover the entire container */
-  background: rgba(248, 237, 223, 0.9); /* Semi-transparent background */
+  background: rgba(277, 264, 250, 0.87); /* Semi-transparent background */
   z-index: 10; /* Ensure it is on top of TestGraph */
   overflow: auto; /* Allow scrolling if content overflows */
   bottom: 0;

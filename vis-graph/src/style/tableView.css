@@ -12,7 +12,7 @@
   .table-container {
     overflow-y: auto; /* Enable vertical scrolling */
     max-width: 100%; /* Ensure the container doesn't exceed viewport width */
-    background-color: #F8EDDF;
+    background-color: rgba(277, 264, 250, 0.87);
     justify-content: center;
     align-items: center;
     margin: auto;

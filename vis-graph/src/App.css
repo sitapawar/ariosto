@@ -1,5 +1,5 @@
 body{
-  background-color: #F8EDDF;
+  background-color: #faf7f2;
 }
 
 .mygraph{
@@ -20,7 +20,7 @@ body{
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: #F8EDDF;
+  background-color: #faf7f2;
   margin-bottom: 0;
 
 }
