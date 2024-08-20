@@ -33,10 +33,12 @@ class Snake extends React.Component {
 
   render() {
     const { fileUploaded, setFileUploaded, showTableView, filteredData} = this.props; // Get props
+    const { apiResponse } = this.state; // Destructure apiResponse from state
+
 
     return (
       <div className="Snake">
-        <p>{this.state.apiResponse}</p>
+      <p>{apiResponse ? apiResponse : 'API response loading...'}</p>
         <GraphManager
           fileUploaded={fileUploaded}
           setFileUploaded={setFileUploaded}
