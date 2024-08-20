@@ -4,8 +4,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px; /* Adjust padding as needed */
-    margin: 20px auto; /* Center the object horizontally and add vertical spacing */
+    margin: auto; /* Center the object horizontally and add vertical spacing */
     min-width: 30%;
     width:100%;
     background-color: #F8EDDF;
