@@ -38,6 +38,7 @@ html, body {
 }
 
 .table-view-overlay {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +50,7 @@ html, body {
   background: rgba(248, 237, 223, 0.9); /* Semi-transparent background */
   z-index: 10; /* Ensure it is on top of TestGraph */
   overflow: auto; /* Allow scrolling if content overflows */
-  padding: 20px; /* Optional: Add some padding for aesthetics */
+  bottom: 0;
+
 }
 

@@ -21,6 +21,7 @@ body{
   align-items: center;
   height: 100vh;
   background-color: #F8EDDF;
+  margin-bottom: 0;
 
 }
 
@@ -30,6 +31,8 @@ body{
   align-items: center;
   flex-grow: 1;
   width: 100%;
-  transform: translateY(-15%);
+  height: 100%;
+  margin-bottom: 0;
+  bottom: 0;
 
 }

@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx';
 import TestGraph from './graphTest';
 import TableView from './TableView'; 
 import '../style/graphManager.css';
-import excelFile from '../assets/CharacterFile2.numbers'; // Excel file in the assets folder
+import excelFile from '../assets/CharacterFile3.numbers'; // Excel file in the assets folder
 
 const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredData }) => {
   const [nodes, setNodes] = useState([]);
@@ -130,9 +130,6 @@ const GraphManager = ({ fileUploaded, setFileUploaded, showTableView, filteredDa
             <div className="table-view-overlay">
               <TableView 
                 nodes={allFilteredNodes} 
-                edges={links} 
-                viewType={viewType}
-                setViewType={setViewType}
               />
             </div>
           )}

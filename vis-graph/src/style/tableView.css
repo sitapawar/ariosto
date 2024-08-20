@@ -4,23 +4,23 @@
 
 
 .TableView {
-    margin: 20px;
+    margin: 2px;
     overflow-y: auto; /* Enable vertical scrolling */
-    width:90%;
+    margin-top: 60px;
   }
   .table-container {
     overflow-y: auto; /* Enable vertical scrolling */
-    height: 450px; /* Set a fixed height for the table container */
-    margin-top: 10px; /* Optional: add some space above the table */
-    max-width: 90%; /* Ensure the container doesn't exceed viewport width */
+    max-width: 100%; /* Ensure the container doesn't exceed viewport width */
     background-color: #F8EDDF;
-
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height:80vh;
   }
 
   .TableView button {
     margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
-
   }
 
   .TableView button {
@@ -44,18 +44,15 @@
   .TableView table {
     width: 100%;
     border-collapse: collapse;
+    
   }
   h2{
-    margin-top: 5%;
     font-family: 'Playfair Display SC', serif;
-
   }
   tbody td {
     padding: 10px;
-    max-width: 40%; /* Set a max-width for cells */
     word-wrap: break-word; /* Allows text to wrap within cells */
     font-family: serif;
-
   }
   
   .TableView th, .TableView td {
@@ -73,4 +70,14 @@
     width: 100%;
     max-width: 100%; /* Ensure the table doesn't exceed the container's width */
     border-collapse: collapse;
+  }
+
+  @media (max-width: 650px) {
+    .TableView th, .TableView td {
+      padding: 4px;
+    }
+
+    tbody td {
+      font-size: 12px;
+    }
   }

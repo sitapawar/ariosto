@@ -11,19 +11,19 @@
   z-index: 1000;
   position: fixed;
   top: 0;
-  height:60px;
+  height: 60px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
 }
 
-.header-logo{
-  height:80px;
+.header-logo {
+  height: 80px;
 }
 
-.title-logo{
-    display: flex;
-    align-items: center;
-
+.title-logo {
+  display: flex;
+  align-items: center;
 }
+
 .navbar-title {
   font-family: 'Playfair Display SC', serif;
   color: #F8EDDF;
@@ -51,8 +51,8 @@
 }
 
 .navbar-button:hover {
-background-color: #C6A58B;  
-color:#000;  
+  background-color: #C6A58B;  
+  color: #000;  
 }
 
 /* Main Dropdown Menu */
@@ -115,4 +115,83 @@ color:#000;
 .dropdown-content a:hover,
 .dropdown-submenu a:hover {
   background-color: #8E6D5B;
+}
+.navbar-dropdown{
+  display: none; 
+}
+
+.navbar-menu-icon{
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .navbar-button {
+    font-size: 15px;
+    padding: 7px 10px;
+  }
+  .navbar-buttons {
+    gap: 1px;
+    margin-right: 10px;
+  }
+  
+}
+
+/* Media Query for Screen Width Less Than 580px */
+@media (max-width: 590px) {
+  .navbar-buttons {
+    display: none; /* Hide the navbar buttons */
+  }
+
+  
+  .navbar-menu-icon {
+    display: inline-block; /* Display the menu icon */
+    cursor: pointer;
+    color: #F8EDDF;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .navbar-menu-icon:hover {
+    color: #C6A58B;
+  }
+  
+  .navbar-dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 50%;
+  }
+  .dropdown-submenu {
+    left: 100%; /* Align to the right of the parent item */
+  }
+  .navbar-button.dropdown{
+    width: 100%;
+    font-size: 19px;
+    padding-left: 10%;
+    text-align: left;
+    padding-left: 20%;
+  }
+  
+  .navbar-dropdown.show {
+    display: block; /* Show the dropdown when active */
+  }
+  
+  .navbar-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #F8EDDF;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Playfair Display', serif;
+    padding-left: 20%;
+  }
+  
+  .navbar-dropdown a:hover {
+    background-color: #C6A58B;
+    color: #000;
+  }
 }

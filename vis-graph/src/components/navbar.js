@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../style/navbar.css';
-import logo from '../assets/AriostoHeader3.png';
 import logo2 from '../assets/header5.png';
 
-
-const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fileUploaded, setFilteredData}) => {
+const Navbar = ({ onUploadClick, onResetClick, showTableView, toggleTableView, fileUploaded, setFilteredData }) => {
   const [groupNames, setGroupNames] = useState([]);
   const [filters, setFilters] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState('');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     if (fileUploaded) {
@@ -30,15 +29,14 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
     })
       .then(res => res.json())
       .then(data => {
-        // Assuming you want to set both sheets in the state
         setFilteredData(data);
       })
       .catch(error => console.error('Error fetching filtered data:', error));
   };
-  
-  const handleResetClick =()=>{
-    setFilteredData(null)
-  }
+
+  const handleResetClick = () => {
+    setFilteredData(null);
+  };
 
   const handleGroupClick = (groupName) => {
     setSelectedGroup(groupName);
@@ -54,12 +52,17 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
       .catch(error => console.error('Error fetching filters:', error));
   };
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="title-logo">
         <img className="header-logo" src={logo2} alt="Logo" />
         <div className="navbar-title">Ariosto's Knots</div>
       </div>
+
       <div className="navbar-buttons">
         <div className="navbar-button dropdown">
           Filter
@@ -68,15 +71,16 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
               groupNames.length > 0 ? (
                 groupNames.map((columnName, index) => (
                   <div key={index} className="dropdown-item">
-                    <a className="groups"href="#" onClick={() => handleGroupClick(columnName)}>
+                    <a className="groups" href="#" onClick={() => handleGroupClick(columnName)}>
                       {columnName}
                     </a>
                     {selectedGroup === columnName && (
                       <div className="dropdown-submenu">
                         {filters.length > 0 ? (
                           filters.map((filter, index) => (
-                            <a href="#" key={index} onClick={() => handleFilterClick(columnName, filter)}
-                            >{filter}</a>
+                            <a href="#" key={index} onClick={() => handleFilterClick(columnName, filter)}>
+                              {filter}
+                            </a>
                           ))
                         ) : (
                           <a href="#">Filter not Found</a>
@@ -97,6 +101,52 @@ const Navbar = ({onUploadClick, onResetClick, showTableView, toggleTableView, fi
         <button className="navbar-button" onClick={toggleTableView}>
           {showTableView ? 'Hide Table View' : 'Show Table View'}
         </button>
+      </div>
+
+      {/* Menu Icon for Small Screens */}
+      <div className="navbar-menu-icon" onClick={toggleDropdown}>
+        ☰
+      </div>
+
+      {/* Dropdown for Small Screens */}
+      <div className={`navbar-dropdown ${dropdownOpen ? 'show' : ''}`}>
+        <a href="#" onClick={handleResetClick}>Reset</a>
+        <a href="#" onClick={toggleTableView}>
+          {showTableView ? 'Hide Table View' : 'Show Table View'}
+        </a>
+        <div className="navbar-button dropdown">
+          Filter
+          <div className="dropdown-content">
+            {fileUploaded ? (
+              groupNames.length > 0 ? (
+                groupNames.map((columnName, index) => (
+                  <div key={index} className="dropdown-item">
+                    <a className="groups" href="#" onClick={() => handleGroupClick(columnName)}>
+                      {columnName}
+                    </a>
+                    {selectedGroup === columnName && (
+                      <div className="dropdown-submenu">
+                        {filters.length > 0 ? (
+                          filters.map((filter, index) => (
+                            <a href="#" key={index} onClick={() => handleFilterClick(columnName, filter)}>
+                              {filter}
+                            </a>
+                          ))
+                        ) : (
+                          <a href="#">Filter not Found</a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <a href="#">Filter not Found</a>
+              )
+            ) : (
+              <a href="#">No file uploaded</a>
+            )}
+          </div>
+        </div>
       </div>
     </nav>
   );

@@ -54,7 +54,7 @@ export default function GraphView() {
         },
         shadow: true,
         smooth: true,
-        height: "900px"
+        height: "1000px"
     }
   return (
     <div className='container'>
