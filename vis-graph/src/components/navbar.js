@@ -110,10 +110,6 @@ const Navbar = ({ onUploadClick, onResetClick, showTableView, toggleTableView, f
 
       {/* Dropdown for Small Screens */}
       <div className={`navbar-dropdown ${dropdownOpen ? 'show' : ''}`}>
-        <a href="#" onClick={handleResetClick}>Reset</a>
-        <a href="#" onClick={toggleTableView}>
-          {showTableView ? 'Hide Table View' : 'Show Table View'}
-        </a>
         <div className="navbar-button dropdown">
           Filter
           <div className="dropdown-content">
@@ -147,6 +143,10 @@ const Navbar = ({ onUploadClick, onResetClick, showTableView, toggleTableView, f
             )}
           </div>
         </div>
+        <a href="#" onClick={handleResetClick}>Reset</a>
+        <a href="#" onClick={toggleTableView}>
+          {showTableView ? 'Hide Table View' : 'Show Table View'}
+        </a>
       </div>
     </nav>
   );
