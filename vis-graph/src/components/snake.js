@@ -5,25 +5,28 @@ import '../style/snake.css';
 class Snake extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "" };
+    this.state = { 
+      apiResponse: "Loading...", 
+      error: null 
+    };
   }
 
   callAPI() {
     fetch("https://spiderweb-j1ca.onrender.com/")
       .then(res => {
         console.log('Response status:', res.status);
-        return res.text().then(text => ({
-          status: res.status,
-          text
-        }));
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.text();
       })
-      .then(res => {
-        console.log('API response:', res.text);
-        this.setState({ apiResponse: res.text });
+      .then(text => {
+        console.log('API response:', text);
+        this.setState({ apiResponse: text });
       })
       .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
-        this.setState({ apiResponse: 'Error: ' + error.message });
+        this.setState({ error: 'Error: ' + error.message });
       });
   }
 
@@ -32,13 +35,12 @@ class Snake extends React.Component {
   }
 
   render() {
-    const { fileUploaded, setFileUploaded, showTableView, filteredData} = this.props; // Get props
-    const { apiResponse } = this.state; // Destructure apiResponse from state
-
+    const { fileUploaded, setFileUploaded, showTableView, filteredData } = this.props; // Get props
+    const { apiResponse, error } = this.state; // Destructure apiResponse and error from state
 
     return (
       <div className="Snake">
-      <p>{apiResponse ? apiResponse : 'API response loading...'}</p>
+        <p>{error ? error : apiResponse}</p>
         <GraphManager
           fileUploaded={fileUploaded}
           setFileUploaded={setFileUploaded}
