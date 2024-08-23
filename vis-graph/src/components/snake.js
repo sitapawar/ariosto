@@ -6,7 +6,7 @@ class Snake extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      apiResponse: "Loading...", 
+      apiResponse: "Connecting to backend! We apologize for the delay.", 
       error: null 
     };
   }
